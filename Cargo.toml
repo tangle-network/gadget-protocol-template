@@ -1,0 +1,22 @@
+[package]
+name = "gadget-protocol-template"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+gadget-common = { git = "https://github.com/webb-tools/gadget" }
+gadget-core = { git = "https://github.com/webb-tools/gadget" }
+protocol-macros = { git = "https://github.com/webb-tools/gadget" }
+
+async-trait = { version = "0.1.73" }
+futures = { version = "0.3.30" }
+tokio = { version = "1.32.0", features = ["macros", "rt-multi-thread", "time", "net"] }
+
+serde = { version = "1.0.188" }
+serde_json = { version = "1.0" }
+parking_lot = { version = "0.12.1" }
+sp-core = { git = "https://github.com/paritytech/polkadot-sdk", branch = "release-polkadot-v1.7.0"  }
+
+[dev-dependencies]
+test-utils = { git = "https://github.com/webb-tools/gadget" }
+tangle-primitives = { git = "https://github.com/webb-tools/tangle.git", branch = "main" }
